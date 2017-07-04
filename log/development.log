@@ -135,3 +135,23 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-07-05 07:30:09 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered common/_navbar.html.erb (0.3ms)
+  Rendered common/_flashes.html.erb (0.5ms)
+  Rendered common/_footer.html.erb (0.3ms)
+Completed 200 OK in 276ms (Views: 256.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-05 07:30:13 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered common/_navbar.html.erb (0.4ms)
+  Rendered common/_flashes.html.erb (0.4ms)
+  Rendered common/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
