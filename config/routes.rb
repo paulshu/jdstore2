@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :products #, only: [:index, :new, :edit, :show]
   end
 
-  root 'product#index'
+  resources :products
+  root 'welcome#index'
 end
