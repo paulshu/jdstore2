@@ -2990,3 +2990,162 @@ Processing by Admin::ProductsController#index as HTML
 Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.3ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToProduct (20170705140753)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "products" ADD "image" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170705140753"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin/products/new" for ::1 at 2017-07-05 22:16:03 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ProductsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/new.html.erb within layouts/admin
+  Rendered admin/products/new.html.erb within layouts/admin (59.2ms)
+Started GET "/admin/products/new" for ::1 at 2017-07-05 22:16:03 +0800
+  Rendered common/_navbar.html.erb (1.5ms)
+Completed 200 OK in 796ms (Views: 767.6ms | ActiveRecord: 1.1ms)
+
+
+Processing by Admin::ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/new.html.erb within layouts/admin
+  Rendered admin/products/new.html.erb within layouts/admin (8.6ms)
+  Rendered common/_navbar.html.erb (0.7ms)
+Completed 200 OK in 92ms (Views: 55.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/products" for ::1 at 2017-07-05 22:16:39 +0800
+Processing by Admin::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpr9+sxFxLFDUIMk1vWfa+6GrhjsR3xDRVwHxp/8p1QMat6Ics1J3E+GnuXqOEOjlfs1YtLuin9v+Mia6i1+ew==", "product"=>{"title"=>"小米6手机", "description"=>"全网通 6GB+128GB 亮蓝色 移动联通电信4G手机 双卡双待", "quantity"=>"322", "price"=>"2899", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc5947ef5e8 @tempfile=#<Tempfile:/var/folders/1r/l04drtr56qv7xh861b6zj_b40000gn/T/RackMultipart20170705-54312-125vc2c.jpg>, @original_filename="ximi6.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"ximi6.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "quantity", "price", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "小米6手机"], ["description", "全网通 6GB+128GB 亮蓝色 移动联通电信4G手机 双卡双待"], ["quantity", 322], ["price", 2899], ["created_at", 2017-07-05 14:16:39 UTC], ["updated_at", 2017-07-05 14:16:39 UTC], ["image", "ximi6.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 271ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/products" for ::1 at 2017-07-05 22:16:39 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/index.html.erb within layouts/admin
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered admin/products/index.html.erb within layouts/admin (2.1ms)
+  Rendered common/_navbar.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/products/1/edit" for ::1 at 2017-07-05 22:16:55 +0800
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/edit.html.erb within layouts/admin
+  Rendered admin/products/edit.html.erb within layouts/admin (7.2ms)
+  Rendered common/_navbar.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/products/1/edit" for ::1 at 2017-07-05 22:18:56 +0800
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/edit.html.erb within layouts/admin
+  Rendered admin/products/edit.html.erb within layouts/admin (8.3ms)
+  Rendered common/_navbar.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/products/1" for ::1 at 2017-07-05 22:20:36 +0800
+Processing by Admin::ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OVur4ODVkOAVXbtKSyYih4xT2G16+dnOdnNfAXOnlU1Lq4iSXl0djRmLpot36/5P9y5DF0RQL/Jc15BdBnZMYg==", "product"=>{"title"=>"Apple iPhone 6 32G 金色", "description"=>"4.7 英寸（对角线）显示屏，1334 x 750 分辨率\r\n配备 Focus Pixels 和 True Tone 闪光灯的 800 万像素摄像头\r\n配备 M8 运动协处理器的 A8 芯片 \r\n1080p HD 视频拍摄 (60 fps) 以及慢动作视频拍摄 (240 fps)\r\nFaceTime HD 摄像头 \r\nTouch ID 指纹识别传感器 \r\n4G LTE和 802.11ac 无线网络", "quantity"=>"60", "price"=>"2578", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc598592508 @tempfile=#<Tempfile:/var/folders/1r/l04drtr56qv7xh861b6zj_b40000gn/T/RackMultipart20170705-54312-1b7b7ts.jpg>, @original_filename="iphone6.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"iphone6.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "products" SET "image" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image", "iphone6.jpg"], ["updated_at", 2017-07-05 14:20:36 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 267ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/products" for ::1 at 2017-07-05 22:20:36 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/index.html.erb within layouts/admin
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered admin/products/index.html.erb within layouts/admin (2.1ms)
+  Rendered common/_navbar.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/products/4/edit" for ::1 at 2017-07-05 22:20:38 +0800
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/products/edit.html.erb within layouts/admin
+  Rendered admin/products/edit.html.erb within layouts/admin (10.8ms)
+  Rendered common/_navbar.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/products/1/edit" for ::1 at 2017-07-05 22:20:42 +0800
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/edit.html.erb within layouts/admin
+  Rendered admin/products/edit.html.erb within layouts/admin (5.5ms)
+  Rendered common/_navbar.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/products" for ::1 at 2017-07-05 22:20:54 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/products/index.html.erb within layouts/admin
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered admin/products/index.html.erb within layouts/admin (1.6ms)
+  Rendered common/_navbar.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+

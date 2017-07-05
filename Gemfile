@@ -26,7 +26,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'simple_form', '~> 3.5'
 gem 'devise'
 gem 'font-awesome-rails'
-
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'annotate'
 
 group :development, :test do
