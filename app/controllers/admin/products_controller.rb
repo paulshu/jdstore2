@@ -1,4 +1,5 @@
 class Admin::ProductsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @products = Product.all
@@ -35,11 +36,9 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
 
-    if @product.delete
-      flash[:warning] = "Are you sure"
-    else
-      redirect_to admin_products_path
-    end
+    @product.destroy
+    flash[:alert] = "商品删除成功"
+    redirect_to admin_products_path
   end
 
   private
