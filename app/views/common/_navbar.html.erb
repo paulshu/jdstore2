@@ -33,6 +33,7 @@
                         <%= link_to(content_tag(:i, ' 后台管理', class: 'fa fa-destop'), admin_products_path)%>
                       </li>
                     <% end %>
+                    <li> <%= link_to("个人订单列表", account_orders_path ) %> </li>
                     <li role="separator" class="divider"></li> <!-- divider是bootstrap dropdowns下的分隔功能，可将多个下拉菜单分开 -->
                     <li> <%= link_to(content_tag(:i, ' 登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
                   </ul>
