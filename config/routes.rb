@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products #, only: [:index, :new, :edit, :show]
+    resources :orders
   end
 
   namespace :account do
